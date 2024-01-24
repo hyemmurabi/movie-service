@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-  <div id="root"></div>
-  <!--don't use html code-->
-</body>
+  <head> </head>
+  <body>
+    <div id="root"></div>
+    <!--don't use html code-->
+  </body>
 
-<!--import React-->
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script>
-  // create element
+  <!--import React-->
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script>
+    // create element
 
-  // hard way (just understand)
-  const root = document.getElementById('root');
-  const sp = React.createElement('span', {id:'super-span', style:{color: 'red'}}, 'wow! It is great span');
-  ReactDOM.render(sp, root);
-</script>
+    // hard way (just understand)
+    const root = document.getElementById('root');
+    const h3 = React.createElement(
+      'h3',
+      {
+        id: 'title',
+        onMouseEnter: () => console.log('mouse enter'),
+      },
+      'wow! It is great span'
+    );
+    const btn = React.createElement(
+      'button',
+      {
+        style: {
+          backgroundColor: 'tomato',
+        },
+        onClick: () => console.log('clicked'),
+      },
+      'click me'
+    );
+    const container = React.createElement('div', null, [h3, btn]);
+    ReactDOM.render(container, root);
+  </script>
 </html>
