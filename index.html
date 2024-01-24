@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div id="root"></div>
+  <!--don't use html code-->
+</body>
+
+<!--import React-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+  // create element
+
+  // hard way (just understand)
+  const root = document.getElementById('root');
+  const sp = React.createElement('span', {id:'super-span', style:{color: 'red'}}, 'wow! It is great span');
+  ReactDOM.render(sp, root);
+</script>
+</html>
